@@ -102,3 +102,36 @@ def date_parser(dates):
     for i in dates:  # for loop
         newList.append(i[:10])  # choosing the first 10 letters in 'dates'
     return newList
+
+
+def stop_words_remover(df):
+    # your code here
+    ''' This function removes all english stop words from a tokenised list
+    in a dataframe's column and returns the modified dataframe with a new
+    column named 'tweets_without_stopwords' that holds a tokenised list
+    without english stop words.
+
+    args:
+        df(Dataframe): A pandas dataframe with a column named 'Tweets'.
+
+    return:
+        df(dataframe): A modified pandas dataframe consisting of a new
+        column named 'tweets_without_stopwords' that holds a list of
+        tweets that have no stop words.
+    '''
+    tweets = df['Tweets'].copy()
+
+    #Tokenizing
+    for i in range(len(tweets)):
+        tweets[i] = tweets[i].lower().split()
+
+        #Stop words removal
+        tweets_without_stopwords = []
+        for word in tweets[i]:
+
+            if word not in stop_words_dict['stopwords']:
+                tweets_without_stopwords.append(word)
+        tweets[i] = tweets_without_stopwords
+    df['Without Stop Words']= tweets
+
+    return df
