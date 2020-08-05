@@ -1,40 +1,6 @@
 import numpy as np
 import pandas as pd
 
-def five_num_summary(items):
-    """
-    function which takes in a list of integers and returns 
-    a dictionary of the five number summary.
-
-    Args:
-        items(list[int]) a list of intergers
-
-    Returns:
-        dict: a dict with keys 'max', 'median', 'min', 'q1',
-        and 'q3' corresponding to the maximum, median, minimum,
-        first quartile and third quartile, respectively rounded
-        to two decimal places.
-    """
-    return_dict = {}
-
-    # changing items list to sorted numpy array
-    np_items = np.array(items)
-    np_items = np.sort(np_items)
-
-    # assigning minimum & maximum value
-    return_dict['min'] = round(np_items[0], 2)
-    return_dict['max'] = round(np_items[-1], 2)
-
-    # assigning median value
-    return_dict['median'] = round(np.median(np_items), 2)
-
-    # assigning q1 value
-    return_dict['q1'] = round(np.percentile(np_items, 25), 2)
-
-    # assigning q2 value
-    return_dict['q2'] = round(np.percentile(np_items, 75), 2)
-
-    return return_dict
 
 def dictionary_of_metrics(items):
     """
@@ -83,6 +49,41 @@ def dictionary_of_metrics(items):
 
     return metrics
 
+def five_num_summary(items):
+    """
+    function which takes in a list of integers and returns 
+    a dictionary of the five number summary.
+
+    Args:
+        items(list[int]) a list of intergers
+
+    Returns:
+        dict: a dict with keys 'max', 'median', 'min', 'q1',
+        and 'q3' corresponding to the maximum, median, minimum,
+        first quartile and third quartile, respectively rounded
+        to two decimal places.
+    """
+    return_dict = {}
+
+    # changing items list to sorted numpy array
+    np_items = np.array(items)
+    np_items = np.sort(np_items)
+
+    # assigning minimum & maximum value
+    return_dict['min'] = round(np_items[0], 2)
+    return_dict['max'] = round(np_items[-1], 2)
+
+    # assigning median value
+    return_dict['median'] = round(np.median(np_items), 2)
+
+    # assigning q1 value
+    return_dict['q1'] = round(np.percentile(np_items, 25), 2)
+
+    # assigning q2 value
+    return_dict['q2'] = round(np.percentile(np_items, 75), 2)
+
+    return return_dict
+
 
 def date_parser(dates):
     ''' This function takes in a string consisting of a date and time
@@ -104,8 +105,31 @@ def date_parser(dates):
     return newList
 
 
+def word_splitter(df):
+
+    ''' This function splits sentences in a dataframe's column into a list
+    of lower case seperate words and returns the dataframe with a new column
+    named 'Split Tweets' that holds a list of lower case seperate words.
+
+    args:
+        df(Dataframe): A dataframe with a column named 'Tweets' which holds
+        sentences.
+
+    return:
+        df(dataframe): A dataframe with a new column named 'Split tweets'
+        that holds a list of lower case seperate words.
+    '''
+    tweets = df['Tweets'].copy()
+
+    for i in range(len(tweets)):
+        tweets[i] = tweets[i].lower().split()
+
+    df['Split Tweets'] = tweets
+
+    return df
+
 def stop_words_remover(df):
-    # your code here
+
     ''' This function removes all english stop words from a tokenised list
     in a dataframe's column and returns the modified dataframe with a new
     column named 'tweets_without_stopwords' that holds a tokenised list
@@ -121,14 +145,13 @@ def stop_words_remover(df):
     '''
     tweets = df['Tweets'].copy()
 
-    #Tokenizing
+    # Tokenizing
     for i in range(len(tweets)):
         tweets[i] = tweets[i].lower().split()
 
-        #Stop words removal
+        # Stop words removal
         tweets_without_stopwords = []
         for word in tweets[i]:
-
             if word not in stop_words_dict['stopwords']:
                 tweets_without_stopwords.append(word)
         tweets[i] = tweets_without_stopwords
