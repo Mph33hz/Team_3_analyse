@@ -174,3 +174,27 @@ def stop_words_remover(df):
     df['hashtags']= df.Tweets. str.lower().str.findall(r'#.*?(?=\s|$)')
     df['hashtags']= df['hashtags']. apply(lambda x: np.nan if len(x) == 0 else x)
     return df
+
+
+def number_of_tweets_per_day(df):
+    ''' This function calculates the number of tweets per day by accouting for
+    a data frame that takes intweets posted at different times of the day. 
+    
+    args:
+        df.index.name(): naming of the index on the new added data frame.
+        value_counts(): A dataframe consists of a date (yyyy-mm-dd) and 
+        time with counted tweets per single day.
+        pd.DataFrame(): new data frame.
+        
+    return:
+        df(index.name, dataframe): A new dataframe with a new index column
+        containing the dates sortedand a column of tweets counted per day.
+    '''
+    df.Date = twitter_df.Date.apply(pd.to_datetime)
+    df['Day'] = [d.date() for d in df['Date']]
+    df['Time'] = [d.time() for d in df['Date']]
+    df = (df.Day.value_counts()).sort_index()
+    df = pd.DataFrame({'Tweets': df})
+    df.index.name = 'Date'
+    return df
+
