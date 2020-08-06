@@ -221,18 +221,17 @@ def extract_municipality_hashtags(df):
 
 
 def number_of_tweets_per_day(df):
-    ''' This function calculates the number of tweets per day by accouting for
-    a data frame that takes intweets posted at different times of the day. 
-    
-    args:
+    '''
+    This function calculates the number of tweets per day by accouting for
+    a data frame that takes intweets posted at different times of the day.
+    Args:
         df.index.name(): naming of the index on the new added data frame.
-        value_counts(): A dataframe consists of a date (yyyy-mm-dd) and 
-        time with counted tweets per single day.
+        value_counts(): A dataframe consists of a date (yyyy-mm-dd) and time
+    with counted tweets per single day.
         pd.DataFrame(): new data frame.
-        
-    return:
+    Return:
         df(index.name, dataframe): A new dataframe with a new index column
-        containing the dates sortedand a column of tweets counted per day.
+    containing the dates sortedand a column of tweets counted per day.
     '''
     df.Date = twitter_df.Date.apply(pd.to_datetime)
     df['Day'] = [d.date() for d in df['Date']]
