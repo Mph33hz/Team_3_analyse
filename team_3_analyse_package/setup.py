@@ -8,5 +8,7 @@ setup(
     description ='Analyse predict for team 3',
     long_description = open('readme.MD').read(),
     install_requires = ['numpy', 'pandas'],
+    url = 'https://github.com/Mph33hz/Team_3_analyse.git'
     author = 'team_3'
+    aouthor_email = 'Mphomokhokane@gmail.com'
 )
