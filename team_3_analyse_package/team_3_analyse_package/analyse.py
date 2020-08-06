@@ -158,3 +158,19 @@ def stop_words_remover(df):
     df['Without Stop Words']= tweets
 
     return df
+
+    def extract_municipality_hashtags(df):
+    """" Returns a DataFrame with two additional column with data 'Municipality'
+         and 'Hashtags' 
+         Args:
+             DataFrame: DateFrame with Data,Index and Colums        
+        Return:
+             DataFrame: A DataFrame with additional columns with data     
+        Egs:
+             df['new colum'] = col_name
+    """
+    df['municipality'] = df['Tweets'].map(lambda x: (i[1:] for i in x.split() if i.startswith('@')))
+    df['municipality'] = df.index.to_series().map(mun_dict)
+    df['hashtags']= df.Tweets. str.lower().str.findall(r'#.*?(?=\s|$)')
+    df['hashtags']= df['hashtags']. apply(lambda x: np.nan if len(x) == 0 else x)
+    return df
