@@ -51,7 +51,7 @@ def dictionary_of_metrics(items):
 
 def five_num_summary(items):
     """
-    function which takes in a list of integers and returns 
+    function which takes in a list of integers and returns
     a dictionary of the five number summary.
 
     Args:
@@ -134,10 +134,8 @@ def stop_words_remover(df):
     in a dataframe's column and returns the modified dataframe with a new
     column named 'tweets_without_stopwords' that holds a tokenised list
     without english stop words.
-
     args:
         df(Dataframe): A pandas dataframe with a column named 'Tweets'.
-
     return:
         df(dataframe): A modified pandas dataframe consisting of a new
         column named 'tweets_without_stopwords' that holds a list of
@@ -155,11 +153,11 @@ def stop_words_remover(df):
             if word not in stop_words_dict['stopwords']:
                 tweets_without_stopwords.append(word)
         tweets[i] = tweets_without_stopwords
-    df['Without Stop Words']= tweets
+    df['Without Stop Words'] = tweets
 
     return df
 
-    def extract_municipality_hashtags(df):
+def extract_municipality_hashtags(df):
     """" Returns a DataFrame with two additional column with data 'Municipality'
          and 'Hashtags' 
          Args:
