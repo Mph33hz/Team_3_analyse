@@ -9,6 +9,6 @@ setup(
     long_description = open('readme.MD').read(),
     install_requires = ['numpy', 'pandas'],
     url = 'https://github.com/Mph33hz/Team_3_analyse.git'
-    author = 'team_3'
+    author = ['Mpho Mokhokane','Kgauhelo Mokgawa','Sorel Ketcha ','Warren Mnisi','Lazola Javu']
     author_email = 'Mphomokhokane@gmail.com'
 )
