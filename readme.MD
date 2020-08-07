@@ -1,4 +1,4 @@
-Explore Data Science Academy team 3 
+# Explore Data Science Academy team 3 
 We have built a package consisting of 7 python functions that compute and analyse structured and unstructured data
 
 
