@@ -104,24 +104,25 @@ def five_num_summary(items):
         first quartile and third quartile, respectively rounded
         to two decimal places.
     """
-    return_dict = {}
+   
+    return_dict={}
 
-    # changing items list to sorted numpy array
+    #changing items list to sorted numpy array
     np_items = np.array(items)
     np_items = np.sort(np_items)
 
-    # assigning minimum & maximum value
+    #assigning minimum & maximum value
     return_dict['min'] = round(np_items[0], 2)
     return_dict['max'] = round(np_items[-1], 2)
 
-    # assigning median value
+    #assigning median value
     return_dict['median'] = round(np.median(np_items), 2)
 
-    # assigning q1 value
+    #assigning q1 value
     return_dict['q1'] = round(np.percentile(np_items, 25), 2)
 
-    # assigning q2 value
-    return_dict['q2'] = round(np.percentile(np_items, 75), 2)
+    #assigning q2 value
+    return_dict['q3'] = round(np.percentile(np_items, 75), 2)
 
     return return_dict
 
