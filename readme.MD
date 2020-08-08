@@ -22,4 +22,20 @@ We have built a package consisting of 7 python functions that compute and analys
            Pandas and Numpy should be imported to used this function
            
     
+# Function : Number of Tweets per Day
+    This function takes in a pandas dataframe as input. It returns a new dataframe that is grouped by day and uses the index to count the number of tweets for that day. The new dataframe index is named 'Date' and the new column 'Tweets', and they correspond to the Date and the number of tweets for that day, respectively. 
+
+    args:
+        pandas.index.name(): naming of the index on the new added data frame.
+        Index.value_counts(): returns object containing counts of unique values.
+        pd.DataFrame(): new data frame.
+        DataFrame.sort_index. Sort object by labels
+        
+    return:
+        df(index.name, dataframe): A new dataframe with a new index column
+        containing the dates sorted and a column of tweets counted per day.
+ 
+    # Notes
+
+    Pandas should be imported to use this function.    
     
