@@ -23,7 +23,8 @@ We have built a package consisting of 7 python functions that compute and analys
            
     
 # Function : Number of Tweets per Day
-    This function takes in a pandas dataframe as input. It returns a new dataframe that is grouped by day and uses the index to count the number of tweets for that day. The new dataframe index is named 'Date' and the new column 'Tweets', and they correspond to the Date and the number of tweets for that day, respectively. 
+
+''' This function takes in a pandas dataframe as input. It returns a new dataframe that is grouped by day and uses the index to count the number of tweets for that day. The new dataframe index is named 'Date' and the new column 'Tweets', and they correspond to the Date and the number of tweets for that day, respectively. 
 
     args:
         pandas.index.name(): naming of the index on the new added data frame.
