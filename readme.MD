@@ -3,7 +3,7 @@ We have built a package consisting of 7 python functions that compute and analys
 
 ## Installing the package from github
 
-'pip install git+https://github.com/Mph33hz/Team_3_analyse.git
+pip install git+https://github.com/Mph33hz/Team_3_analyse.git
 
 ## ugrading the package from github
 
