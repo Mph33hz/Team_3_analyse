@@ -1,9 +1,17 @@
-# Explore Data Science Academy team 3 
+# Explore Data Science Academy Team 3 - Analyse 
 We have built a package consisting of 7 python functions that compute and analyse structured and unstructured data
 
+## Installing the package from github
+
+'pip install git+https://github.com/Mph33hz/Team_3_analyse.git
+
+## ugrading the package from github
+
+pip install --upgrade git+https://github.com/Mph33hz/Team_3_analyse.git
 
 
-# Function Word_Splitter
+
+## Function : Word_Splitter
 
 ''' This function splits sentences in a dataframe's column by whitespaces into a list
     of seperate words and returns the dataframe with a new column
@@ -22,7 +30,7 @@ We have built a package consisting of 7 python functions that compute and analys
            Pandas and Numpy should be imported to used this function
            
     
-# Function : Number of Tweets per Day
+## Function : Number of Tweets per Day
 
 ''' This function takes in a pandas dataframe as input. It returns a new dataframe that is grouped by day and uses the index to count the number of tweets for that day. The new dataframe index is named 'Date' and the new column 'Tweets', and they correspond to the Date and the number of tweets for that day, respectively. 
 
