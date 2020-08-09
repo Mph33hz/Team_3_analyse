@@ -46,5 +46,25 @@ pip install --upgrade git+https://github.com/Mph33hz/Team_3_analyse.git
  
     # Notes
 
-    Pandas should be imported to use this function.    
+    Pandas should be imported to use this function.   
+    
+    
+## Function : Date Parser
+
+   This function takes in a string consisting of a date and time
+   in the form 'yyyy-mm-dd hh:mm:ss and returns just the date in
+   the form 'yyy-mm-dd'
+
+    args:
+        dates: A list consisting of strings in the format 'yyyy-mm-dd hh:mm:ss'
+        newList: A list consisting of dates only in the form 'yyyy-mm-dd'
+        from the dates variable.
+
+    return:
+        returns a list that consists only of the first 10 words/characters in
+        each string, thus outputting only the date in the form 'yyyy-mm-dd'
+    
+    
+    
+    
     
