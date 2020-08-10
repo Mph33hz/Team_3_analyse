@@ -58,34 +58,32 @@ def dictionary_of_metrics(items):
 
     Returns:
          a dict with keys 'mean', 'median', 'std', 'var', 'min',
-         and 'max', corresponding to the mean, median, standard deviation, 
+         and 'max', corresponding to the mean, median, standard deviation,
          variance, minimum and maximum of the input list, respectively.
     """
-
-    metrics={}
-
+    metrics = {}
     # Mean
-    mean = round(np.mean(items),2)
+    mean = round(np.mean(items), 2)
     metrics['mean'] = mean
 
     # median
-    median = round(np.median(items),2)
+    median = round(np.median(items), 2)
     metrics['median'] = median
 
     # variance
-    var = round(np.var(items,ddof=1),2)
+    var = round(np.var(items, ddof=1), 2)
     metrics['var'] = var
 
     # std
     std = round(np.std(items, ddof=1), 2)
-    metrics['std'] = std       
+    metrics['std'] = std
 
     # min
-    mini=round(min(items),2)      
+    mini = round(min(items), 2)
     metrics['min'] = mini
 
     # max
-    maxi=round(max(items),2)
+    maxi = round(max(items), 2)
     metrics['max'] = maxi
 
     return metrics
