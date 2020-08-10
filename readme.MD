@@ -71,11 +71,11 @@ pip install --upgrade git+https://github.com/Mph33hz/Team_3_analyse.git
     pandas Dataframe to analyse the twitter information about Eskom, and returns a new Datframe(twitter_df_copy) with additional
     columns ('Municipality') and ('Hashtag') both columns are created from extracting a pandas series from the original DataFrame.
 
-         Args:
-             DataFrame: DateFrame(Twitter_df) with Data,Index and Colums
+    Args:
+        DataFrame: DateFrame(Twitter_df) with Data,Index and Colums
 
-        Return:
-             DataFrame: A DataFrame with additional columns from existing DataFrame with data     
+    Return:
+         DataFrame: A DataFrame with additional columns from existing DataFrame with data     
         
     
     
