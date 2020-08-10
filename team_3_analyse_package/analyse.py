@@ -200,7 +200,7 @@ def stop_words_remover(df):
     return df
 
 def extract_municipality_hashtags(df):
-    # your code here
+
     """" Returns a DataFrame with two additional column with data 'Municipality'
          and 'Hashtags'
          Args:
