@@ -200,21 +200,24 @@ def stop_words_remover(df):
     return df
 
 def extract_municipality_hashtags(df):
+    # your code here
     """" Returns a DataFrame with two additional column with data 'Municipality'
-         and 'Hashtags' 
+         and 'Hashtags'
          Args:
-             DataFrame: DateFrame with Data,Index and Colums        
+             DataFrame: DateFrame with Data,Index and Colums
         Return:
-             DataFrame: A DataFrame with additional columns with data     
+             DataFrame: A DataFrame with additional columns with data
         Egs:
              df['new colum'] = col_name
     """
-    df['municipality'] = df['Tweets'].map(lambda x: (i[1:] for i in x.split() if i.startswith('@')))
+    tweets = df['Tweets']
+    tweets.map(lambda x: (i[1:] for i in x.split() if i.startswith('@')))
+    df['municipality'] = tweets
     df['municipality'] = df.index.to_series().map(mun_dict)
-    df['hashtags']= df.Tweets. str.lower().str.findall(r'#.*?(?=\s|$)')
-    df['hashtags']= df['hashtags']. apply(lambda x: np.nan if len(x) == 0 else x)
+    df['hashtags'] = df.Tweets. str.lower().str.findall(r'#.*?(?=\s|$)')
+    htags = df['hashtags']
+    df['hashtags'] = htags.apply(lambda x: np.nan if len(x) == 0 else x)
     return df
-
 
 def number_of_tweets_per_day(df):
     '''
