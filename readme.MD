@@ -63,6 +63,21 @@ pip install --upgrade git+https://github.com/Mph33hz/Team_3_analyse.git
     return:
         returns a list that consists only of the first 10 words/characters in
         each string, thus outputting only the date in the form 'yyyy-mm-dd'
+
+
+### Function 4: Extract Muncipality and Hastag from Existing DataFrame
+
+    This Function takes in a DataFrame(twitter_df) as an input with data,indexes and columns from a HTLM source and it is saved as 
+    pandas Dataframe to analyse the twitter information about Eskom, and returns a new Datframe(twitter_df_copy) with additional
+    columns ('Municipality') and ('Hashtag') both columns are created from extracting a pandas series from the original DataFrame.
+
+    Args:
+        DataFrame: DateFrame(Twitter_df) with Data,Index and Colums
+
+    Return:
+         DataFrame: A DataFrame with additional columns from existing DataFrame with data     
+        
+    
     
     
     
