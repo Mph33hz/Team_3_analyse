@@ -5,13 +5,18 @@ We have built a package consisting of 7 python functions that compute and analys
 
 pip install -e git+https://github.com/Mph33hz/Team_3_analyse#egg=team_3_analyse_package
 
+![](Images/installing_package.PNG)
+
+## Importing modules
+![](Images/importing.png)
+
 ## ugrading the package from github
 
 pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analyse#egg=team_3_analyse_package
 
 
-
 ## Function : Word_Splitter
+![](Images/Tokenz.jpeg)
 
 ''' This function splits sentences in a dataframe's column by whitespaces into a list
     of seperate words and returns the dataframe with a new column
@@ -28,7 +33,11 @@ pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analy
         
     # Notes
            Pandas and Numpy should be imported to used this function
-           
+### Word_Splitter Example
+![](Images/word_splitter.PNG)
+
+
+
     
 ## Function : Number of Tweets per Day
 
