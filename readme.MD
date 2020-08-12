@@ -96,7 +96,19 @@ pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analy
     Returns:
          a dict with keys 'mean', 'median', 'std', 'var', 'min',
          and 'max', corresponding to the mean, median, standard deviation, variance, minimum and maximum of the input list, respectively. All rounded to two decimal places.
+
+## Five Number Summary
+
+     This function takes in a list of integers and returns a dictionary of the five number summary:
+     consists of five values: the most extreme values in the data set (the maximum and minimum values), the lower and upper quartiles, and the median.
     
-    
+    Args:
+        items(list[int]) a list of intergers
+
+    Returns:
+        dict: a dict with keys 'max', 'median', 'min', 'q1',
+        and 'q3' corresponding to the maximum, median, minimum,
+        first quartile and third quartile, respectively rounded
+        to two decimal places.
     
     
