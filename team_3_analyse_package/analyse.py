@@ -49,6 +49,7 @@ stop_words_dict = {
 
 
 def dictionary_of_metrics(items):
+
     """
     a function that calculates the mean, median, variance,
     standard deviation, minimum and maximum of of list of items.
@@ -88,6 +89,7 @@ def dictionary_of_metrics(items):
 
     return metrics
 
+
 def five_num_summary(items):
     """
     function which takes in a list of integers and returns
@@ -123,6 +125,7 @@ def five_num_summary(items):
     return_dict['q3'] = round(np.percentile(np_items, 75), 2)
 
     return return_dict
+
 
 def date_parser(dates):
     ''' This function takes in a string consisting of a date and time
@@ -167,6 +170,7 @@ def word_splitter(df):
 
     return df
 
+
 def stop_words_remover(df):
 
     ''' This function removes all english stop words from a tokenised list
@@ -196,6 +200,7 @@ def stop_words_remover(df):
 
     return df
 
+
 def extract_municipality_hashtags(df):
 
     """" Returns a DataFrame with two additional column with data 'Municipality'
@@ -215,6 +220,7 @@ def extract_municipality_hashtags(df):
     htags = df['hashtags']
     df['hashtags'] = htags.apply(lambda x: np.nan if len(x) == 0 else x)
     return df
+
 
 def number_of_tweets_per_day(df):
     '''
