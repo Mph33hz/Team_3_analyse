@@ -229,7 +229,7 @@ def number_of_tweets_per_day(df):
         df(index.name, dataframe): A new dataframe with a new index column
     containing the dates sortedand a column of tweets counted per day.
     '''
-    df.Date = twitter_df.Date.apply(pd.to_datetime)
+    df.Date = df.Date.apply(pd.to_datetime)
     df['Day'] = [d.date() for d in df['Date']]
     df['Time'] = [d.time() for d in df['Date']]
     df = (df.Day.value_counts()).sort_index()
