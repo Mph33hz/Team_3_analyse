@@ -1,5 +1,5 @@
 # Explore Data Science Academy Team 3 - Analyse 
-We have built a package consisting of 7 python functions that compute and analyse structured and unstructured data
+### We have built a package consisting of 7 python functions that compute and analyse structured and unstructured data
 
 ## Installing the package from github
 
