@@ -110,5 +110,23 @@ pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analy
         and 'q3' corresponding to the maximum, median, minimum,
         first quartile and third quartile, respectively rounded
         to two decimal places.
+        
+## Stop Words Remover
+
+
+   This function removes all english stop words from a tokenised list
+   in a dataframe's column and returns the modified dataframe with a new
+   column named 'tweets_without_stopwords' that holds a tokenised list
+   without english stop words.
+   
+   
+    args:
+        df(Dataframe): A pandas dataframe with a column named 'Tweets'.
+    return:
+        df(dataframe): A modified pandas dataframe consisting of a new
+        column named 'tweets_without_stopwords' that holds a list of
+        tweets that have no stop words.
+    
+ 
     
     
