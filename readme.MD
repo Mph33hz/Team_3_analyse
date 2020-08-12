@@ -15,7 +15,7 @@ pip install -e git+https://github.com/Mph33hz/Team_3_analyse#egg=team_3_analyse_
 pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analyse#egg=team_3_analyse_package
 
 
-## Function : Word_Splitter
+## Word_Splitter
 ![](Images/Tokenz.jpeg)
 
 ''' This function splits sentences in a dataframe's column by whitespaces into a list
@@ -39,7 +39,7 @@ pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analy
 
 
     
-## Function : Number of Tweets per Day
+## Number of Tweets per Day
 
 ''' This function takes in a pandas dataframe as input. It returns a new dataframe that is grouped by day and uses the index to count the number of tweets for that day. The new dataframe index is named 'Date' and the new column 'Tweets', and they correspond to the Date and the number of tweets for that day, respectively. 
 
@@ -58,7 +58,7 @@ pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analy
     Pandas should be imported to use this function.   
     
     
-## Function : Date Parser
+## Date Parser
 
    This function takes in a string consisting of a date and time
    in the form 'yyyy-mm-dd hh:mm:ss and returns just the date in
@@ -74,7 +74,7 @@ pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analy
         each string, thus outputting only the date in the form 'yyyy-mm-dd'
 
 
-### Function 4: Extract Muncipality and Hastag from Existing DataFrame
+### Extract Muncipality and Hastag from Existing DataFrame
 
     This Function takes in a DataFrame(twitter_df) as an input with data,indexes and columns from a HTLM source and it is saved as 
     pandas Dataframe to analyse the twitter information about Eskom, and returns a new Datframe(twitter_df_copy) with additional
@@ -86,7 +86,7 @@ pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analy
     Return:
          DataFrame: A DataFrame with additional columns from existing DataFrame with data     
 
- ##  Metric Dictionary
+ ## Metric Dictionary
 
      This function that calculates the mean, median, variance, standard deviation, minimum and maximum of of list of items. The given list should contain only numerical entries.       
     
