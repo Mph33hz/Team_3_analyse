@@ -7,12 +7,15 @@ pip install -e git+https://github.com/Mph33hz/Team_3_analyse#egg=team_3_analyse_
 
 ![](Images/installing_package.PNG)
 
-## Importing modules
-![](Images/importing.png)
-
 ## ugrading the package from github
 
 pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analyse#egg=team_3_analyse_package
+![](Images/upgrade-package.PNG)
+
+
+## Importing modules
+![](Images/importing.png)
+
 
 
 ## Word_Splitter
