@@ -85,9 +85,17 @@ pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analy
 
     Return:
          DataFrame: A DataFrame with additional columns from existing DataFrame with data     
-        
+
+ ##  Metric Dictionary
+
+     This function that calculates the mean, median, variance, standard deviation, minimum and maximum of of list of items. The given list should contain only numerical entries.       
     
-    
+    Args:
+        items(list[int]) a list of intergers.
+
+    Returns:
+         a dict with keys 'mean', 'median', 'std', 'var', 'min',
+         and 'max', corresponding to the mean, median, standard deviation, variance, minimum and maximum of the input list, respectively. All rounded to two decimal places.
     
     
     
