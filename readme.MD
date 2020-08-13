@@ -132,4 +132,11 @@ pip install --upgrade pip install -e git+https://github.com/Mph33hz/Team_3_analy
     
  
     
-    
+## Contributors:
+
+        -Name: Orline Sorel Ketcha   email:sorelleketcha@gmail.com
+        -Name: Mpho Mokhokane        email:mphomokhokane@gmail.com
+        -Name: Kgauhelo Mokgawa      email:mokgawakgauhelo@gmail.com
+        -Name: Warren Mnisi          email:mbekezelimnisi@gmail.com
+        -Name: Lazola Javu           email:lazola.javu@gmail.com
+        
